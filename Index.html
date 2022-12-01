@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+    
+    <title>READY BASEMAP</title>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="JS"></script>
+</head>
+<a href="#" style="margin-left: 40% ; font-size: 24px; font-family: 'Times New Roman', serif; color: rgb(0, 3, 205);">MAPPING</a>
+<br
+<a href="#" style="margin-left: 40% ; font-size: 24px; font-family: 'Times New Roman', serif; color: rgb(0, 255, 76);">WEB MAP DISPLAY </a>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&family=Poppins:ital,wght@0,200;0,900;1,200&display=swap" rel="stylesheet">
+
+<body>
+    <section>
+<div id="map" style="width:100%; height:500px;"></div>
+
+        <script>
+            // map options
+            var mapOptions = {
+             center:[ -1.1018, 37.0144],
+             zoom:10
+            }
+            //create map object
+            var map = new L.map('map', mapOptions)
+            //layer obj
+            var layer = new L.TileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png')
+         
+            //add layer
+            map.addLayer(layer);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap</a>',
+	}).addTo(map);
+	var marker = new
+	L.marker([-1.0912, 37.0117]).addTo(map).bindPopup("<b>Name: </b>JKUAT <b><br>Cuisine: </b> UNIVERSITY <br>Date: </b>12/10/22").on('mouseover',function(e){this.openPopup()}).on('mouseout', function(e){this.closePopup()});
+	
+         
+         </script>
+    </section>
+
+    <section class="footer">
+        <li i style="margin-right: 30%"; class="contributers">CONTRIBUTERS<i/li>
+            <ul style="color: rgb(0, 0, 0);">GOOGLE MAPS</ul>
+             <li  i style="margin-right: 30%" ; class="authors">AUTHORS <i/li>
+             <ul style="color:rgba(0, 0, 0);">EVANS MUTUMA</ul>
+             <li  style="margin-right: 30%" ; class="marginal information">MARGINAL INFORMATION<i/li>
+             <ul style="color: rgb(0, 0, 0);">OPENSTREET NAVIGATE</ul>
+             
+         
+             </div>
+         </div>
+        
+
+</body>
+</html>

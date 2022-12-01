@@ -1,0 +1,31 @@
+<script>
+  // map options
+  var mapOptions = {
+    center: [-1.1018, 37.0144],
+    zoom: 10,
+  };
+  //create map object
+  var map = new L.map("map", mapOptions);
+  //layer obj
+  var layer = new L.TileLayer(
+    "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+  );
+
+  //add layer
+  map.addLayer(layer);
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution:
+      '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap</a>',
+  }).addTo(map);
+  var marker = new L.marker([-1.0912, 37.0117])
+    .addTo(map)
+    .bindPopup(
+      "<b>Name: </b>JKUAT <b><br>Cuisine: </b> UNIVERSITY <br>Date: </b>12/10/22"
+    )
+    .on("mouseover", function (e) {
+      this.openPopup();
+    })
+    .on("mouseout", function (e) {
+      this.closePopup();
+    });
+</script>

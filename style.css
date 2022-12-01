@@ -1,0 +1,35 @@
+<style>
+    a:click {
+      background-color: rgb(0, 255, 55);
+    }
+</style>
+
+
+<style>
+        .footer{
+            
+            background-color: rgb(29, 39, 34);
+            min-height: 30vh; padding: 8px;
+    
+
+        }
+       
+        </style>
+        
+       <div class="footer_section">
+       <style>
+        .footer_section{
+            display: flex;
+            flex-direction: row;
+            row-gap: 2rem;
+            color: rgb(4, 4, 8);
+			font-family:poppins;
+            list-style:none;
+            margin-top: 1.8rem;
+        }
+       </style>
+
+      
+       
+    
+</section>
